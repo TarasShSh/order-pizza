@@ -18,27 +18,27 @@ public class IngridientController {
         this.ingridientService = ingridientService;
     }
 
-    @GetMapping("/words")
+    @GetMapping("/ingridients")
     public ResponseEntity<List<IngridientDTO>> getAllWords() {
         return ResponseEntity.ok().body(ingridientService.getAllIngridient());
     }
 
-    @GetMapping("/words/{id}")
+    @GetMapping("/ingridients/{id}")
     public ResponseEntity<IngridientDTO> getWordById(@PathVariable final Long id) {
         return ResponseEntity.ok().body(ingridientService.getIngridientById(id));
     }
 
-    @PostMapping("/words")
+    @PostMapping("/ingridients")
     public ResponseEntity<IngridientDTO> saveWord(@Validated @RequestBody final IngridientDTO wordDTO) {
         return ResponseEntity.ok().body(ingridientService.saveIngridient(wordDTO));
     }
 
-    @PutMapping("/words")
+    @PutMapping("/ingridients")
     public ResponseEntity<IngridientDTO> updateWord(@Validated @RequestBody final IngridientDTO wordDTO) {
         return ResponseEntity.ok().body(ingridientService.updateIngridient(wordDTO));
     }
 
-    @DeleteMapping("/words/{id}")
+    @DeleteMapping("/ingridients/{id}")
     public ResponseEntity deleteWordById(@PathVariable final Long id) {
         ingridientService.deleteIngridientById(id);
         return ResponseEntity.ok().build();

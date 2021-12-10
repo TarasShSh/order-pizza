@@ -1,19 +1,19 @@
 package lpnu.mapper;
 
-import lpnu.dto.UserDTO;
-import lpnu.entity.User;
+import lpnu.dto.OrderDTO;
+import lpnu.entity.Order;
 import org.springframework.stereotype.Component;
 
 @Component
 public class OrderToOrderDTOMapper {
-    public User toEntity(final OrderDTO orderDTO){
-        return new User(
+    public Order toEntity(final OrderDTO orderDTO){
+        return new Order(
                 orderDTO.getId(),
                 orderDTO.getPizza()
                );
     }
-    public UserDTO toDTO(final Order order){
-        return new UserDTO(
+    public OrderDTO toDTO(final Order order){
+        return new OrderDTO(
                 order.getId(),
                 order.getPizza()
                 );

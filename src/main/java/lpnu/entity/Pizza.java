@@ -1,20 +1,18 @@
 
-package lpnu.dto;
-
-        import lpnu.entity.Ingridient;
+package lpnu.entity;
 
         import java.util.Objects;
 
-public class PizzaDTO {
+public class Pizza {
     private Long id;
     private Ingridient ingridient;
+   // private int pizzaTotalPrice;
 
-
-    private PizzaDTO(){
+    public Pizza(){
 
     }
 
-    public PizzaDTO(final Long id, final Ingridient word) {
+    public Pizza(final Long id, final Ingridient ingridient) {
         this.id = id;
         this.ingridient = ingridient;
     }
@@ -31,15 +29,16 @@ public class PizzaDTO {
         return ingridient;
     }
 
-    public void setIngridient(Ingridient ingridient) {
+    public void setIngridient(final Ingridient ingridient) {
         this.ingridient = ingridient;
     }
+
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        PizzaDTO that = (PizzaDTO) o;
+        Pizza that = (Pizza) o;
         return Objects.equals(ingridient, that.ingridient);
     }
 

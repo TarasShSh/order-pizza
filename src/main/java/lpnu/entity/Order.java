@@ -5,6 +5,7 @@ package lpnu.entity;
 public class Order {
     private Long id;
     private Pizza pizza;
+ //   private int totalprice;
 
     public Order(){
 

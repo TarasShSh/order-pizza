@@ -19,27 +19,27 @@ public class OrderController {
         this.orderService = orderService;
     }
 
-    @GetMapping("/dictionary-books")
+    @GetMapping("/orders")
     public ResponseEntity<List<OrderDTO>> getAllOrders() {
         return ResponseEntity.ok().body(orderService.getAllOrders());
     }
 
-    @GetMapping("/dictionary-books/{id}")
+    @GetMapping("/orders/{id}")
     public ResponseEntity<OrderDTO> getOrderById(@PathVariable final Long id) {
         return ResponseEntity.ok().body(orderService.getOrderById(id));
     }
 
-    @PostMapping("/dictionary-books")
+    @PostMapping("/orders")
     public ResponseEntity<OrderDTO> saveOrder(@Validated @RequestBody final OrderDTO orderDTO) {
         return ResponseEntity.ok().body(orderService.saveOrder(orderDTO));
     }
 
-    @PutMapping("/dictionary-books")
+    @PutMapping("/orders")
     public ResponseEntity<OrderDTO> updateOrder(@Validated @RequestBody final OrderDTO orderDTO) {
         return ResponseEntity.ok().body(orderService.updateOrder(orderDTO));
     }
 
-    @DeleteMapping("/dictionary-books/{id}")
+    @DeleteMapping("/orders/{id}")
     public ResponseEntity deleteOrderById(@PathVariable final Long id) {
         orderService.deleteOrderById(id);
         return ResponseEntity.ok().build();
