@@ -17,10 +17,10 @@ public class IngridientRepository {
         return new ArrayList<>(ingridients);
     }
 
-    public void deleteWordById(final Long id) {
-        for (final Ingridient word : ingridients) {
-            if (word.getId().equals(id)) {
-                ingridients.remove(word);
+    public void deleteIngridientById(final Long id) {
+        for (final Ingridient ingridient : ingridients) {
+            if (ingridient.getId().equals(id)) {
+                ingridients.remove(ingridient);
                 break;
             }
         }

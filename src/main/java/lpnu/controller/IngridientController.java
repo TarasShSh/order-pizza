@@ -20,7 +20,7 @@ public class IngridientController {
 
     @GetMapping("/ingridients")
     public ResponseEntity<List<IngridientDTO>> getAllWords() {
-        return ResponseEntity.ok().body(ingridientService.getAllIngridient());
+        return ResponseEntity.ok().body(ingridientService.getAllIngridients());
     }
 
     @GetMapping("/ingridients/{id}")

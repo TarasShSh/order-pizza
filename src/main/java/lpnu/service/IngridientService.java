@@ -8,7 +8,7 @@ package lpnu.service;
 
 public interface IngridientService {
     IngridientDTO saveIngridient(final IngridientDTO ingridientDTO);
-    List<IngridientDTO> getAllIngridient();
+    List<IngridientDTO> getAllIngridients();
     IngridientDTO getIngridientById(final Long id);
     IngridientDTO updateIngridient(final IngridientDTO ingridientDTO);
     void deleteIngridientById(final Long id);
